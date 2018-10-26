@@ -4,7 +4,7 @@ function myMove() {
   var pos = 0;
   var id = setInterval(frame, 5);
   function frame() {
-    if (pos == elem2.style.width) {
+    if (pos == 500) {
       clearInterval(id);
     } else {
       pos++;
