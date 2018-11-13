@@ -15,6 +15,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="journeyGraphics.js"></script>
+    <link rel="icon" href="assets/favicon.ico">
+    <!-- Much of the style of this page was gleefully adapted from https://getbootstrap.com/docs/4.1/examples/product/# -->
   </head>
   <body>
     <!-- NAVBAR -->
@@ -89,34 +91,78 @@
         </div> <!-- /.navbar-nav, left-hand content -->
     </nav>
     <!-- OTHER STUFF ON THE PAGE -->
-    <div class="row justify-content-center">
+    <!-- <div class="row justify-content-center"> -->
       <!-- <div class="col-md boxy">
       </div> -->
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
       <div class="col-md boxy">
         <div class="jumbotron">
           <h1>Simon Durbridge</h1>
           <p class="font-weight-light">creativity through engineering</p>
           <p> <img src="assets\climbingPhoto1.jpg" class="img-fluid" alt="Responsive image"> </p>
-          <p>I am a DSP engineer (in research) by trade, and I am soon to be primarily an academic researcher by occupation. </p>
-          <p>I will be starting a PhD in electronic engineering in the new year; where I will be studying the definition of disturbing noise, and the impact of noise on sleep quality.</p>
-          <p>This work will undoubtedly include the creation of networks of IoT biometric sensors,
-            (neural network) machine listeners, and feedback devices in the form of analytics and noise maskers.</p>
-          <p>I will suppliment my research with freelance programming (development), and making synthesizer modules to order.</p>
-          <p>If you are interested in my research, modular synthesizers, or hiring me on a freelance basis for a development task, please get in touch!</p>
+          <p>I am a DSP engineer (in research) by trade, and I will soon to be an academic researcher by occupation. </p>
+          <p>In the new year, I will be starting a PhD in electronic engineering at the University of York; where I will be studying the definition of disturbing noise, and the impact of noise on sleep quality.</p>
+          <p>This work will include coupling biometric sensors with IoT elements,
+            generating and deploying (neural network) machine listeners, and creating feedback devices that can help people get better sleep.</p>
+          <p>I aim to suppliment my research with consulting work, and selling synthesizer modules.</p>
+          <p>If you are interested in my research, modular synthesizers, or hiring me as a consultant, please get in touch!</p>
           <!-- <p> <a href="phd.html"> PhD </a>  </p>
           <p> <a href="tutoring.html"> Tutoring </a>  </p> -->
-          <h2>WhoWhatWhereWhenWhy?</h2>
+          <h2>Disclaimer</h2>
           <p>
-          This website is a portal to share and express my work and ideas.
-          Not only does this include some of the ideas I have already had, but more importantly I hope it will include the ideas I am developing (and some cool ideas from other people, that I find interesting).
-        </p>
-        <p>
-          However, I am only filling this website with content as I re-learn how to develop websites. As such, adding content is going to be an organic process.
-          Also, learning to make this website is one of the minor projects I have going on in my spare time.
+          I am building this website as I learn how to do web development, so adding content is going to be an organic process.
          </p>
        </div>
      </div>
     </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">PhD</h2>
+          <p class="lead">See the state of my research, the last time I updated this site.</p>
+          <a href="phd.html"><img src="assets/presentingRS17.jpg" class="img-fluid" alt="PhD Image"></a>
+        </div>
+        <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Consultancy</h2>
+          <p class="lead">See some of the things I can do with you.</p>
+          <a href="consultancy.html"><img src="assets/NSynth Chasis1.jpg" class="img-fluid" alt="PhD Image"></a>
+        </div>
+        <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
+      </div>
+    </div>
+
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Modular Synthesis</h2>
+          <p class="lead">See what I am doing in the world of modular.</p>
+          <a href="modularforsale.html"><img src="assets/osm.jpg" class="img-m" alt="PhD Image"></a>
+        </div>
+        <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
+      </div>
+      <div class="bg-primary mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">DSP</h2>
+          <p class="lead">Check out my DSP projects.</p>
+          <a href="dsp.html"><img src="assets/flashygiffedbigger.gif" class="img-m" alt="PhD Image"></a>
+        </div>
+        <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
+      </div>
+    </div>
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <a href="index.html"><img src="assets/favicon.ico/apple-icon-57x57.png" class="img-m" alt="brand"></a>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+        </div>
+      </div>
+    </footer>
+
     <div class="row">
       <div class="col-lg boxy">
         <div class="container">
