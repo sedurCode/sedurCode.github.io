@@ -24,20 +24,20 @@
       function drawSeriesChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['ID',        'Complexity', 'Competency', 'LanguageType', 'Experience'],
-          ['Python',    0.6,             0.75,         'Scripted',      0.6],
-          ['C++',       0.8,            0.4,           'Compiled',      0.3],
-          ['Matlab',    0.5,             1.0,          'Scripted',      1.0],
-          ['Java',      0.4,             0.4,           'Scripted',      0.3],
-          ['Web',       0.2,             0.6,           'Scripted',      0.3],
-          ['Assembler', 0.8,              0.8,          'Compiled',      0.6],
-          ['Google Charts inflexibility to define axis limits.', 1.2, 1.2, 'Scripted', 0.1]]);
+          ['ID',        'Complexity', 'Confidence', 'LanguageType', 'Experience'],
+          ['Python',    0.6,          0.75,          'Scripted',      0.6],
+          ['C++',       0.8,          0.5,           'Compiled',      0.3],
+          ['Matlab',    0.5,          1.0,           'Scripted',      1.0],
+          ['Java',      0.4,          0.4,           'Scripted',      0.2],
+          ['Web',       0.2,          0.4,           'Scripted',      0.2],
+          ['Assembler', 0.8,          0.8,           'Compiled',      0.6],
+          ['Google Charts inflexibility to define axis limits.', 1.1, 1.1, 'Scripted', 0.1]]);
 
         var options = {
-          title: 'Relationship Between Languages I Have Programmed in' +
-                 'and, its Complexity and Reliance on Libraries',
+          title: 'The Relationship Between the Languages I Have Programmed in, ' +
+                 'the languanges Complexity and How Confident I Feel About Programming in That Language.',
           hAxis: {title: 'Complexity'},
-          vAxis: {title: 'Competency'},
+          vAxis: {title: 'Confidence'},
           bubble: {textStyle: {fontSize: 11},
           hAxis: {}}
         };
@@ -133,7 +133,6 @@
             <li>Audio algorithm development and implementation</li>
             <li>Analog Devices Sigma DSP Custom Processing Block Development</li>
             <li>Audio app development</li>
-            <li>Audio plugin development</li>
             <li>Matlab toolbox development</li>
             <li>Matlab app development</li>
             <li>Python module development</li>
