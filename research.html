@@ -10,9 +10,90 @@
 
   gtag('config', 'UA-128165354-1');
 </script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['gantt']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function daysToMilliseconds(days) {
+    return days * 24 * 60 * 60 * 1000;
+  }
+
+  function drawChart() {
+
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Task ID');
+    data.addColumn('string', 'Task Name');
+    data.addColumn('string', 'Resource');
+    data.addColumn('date', 'Start Date');
+    data.addColumn('date', 'End Date');
+    data.addColumn('number', 'Duration');
+    data.addColumn('number', 'Percent Complete');
+    data.addColumn('string', 'Dependencies');
+
+    data.addRows([
+      ['experiment2', 'Experiment2','Data',
+      new Date(2022, 3, 1), new Date(2022, 5, 1), null,  50,  null],
+      ['experiment3', 'Experiment3','Data',
+      new Date(2022, 4, 1), new Date(2022, 6, 1), null,  20,  null],
+      ['experiment4', 'Experiment4','Data',
+      new Date(2022, 5, 1), new Date(2022, 7, 1), null,  10,  null],
+      ['Chapter1Write', 'Chapter1: Write','Introduction',
+      new Date(2022, 4, 1), null, daysToMilliseconds(30), 0, null],
+      ['Chapter1Edit', 'Chapter1: Edit','Introduction',
+      new Date(2022, 5, 1), null, daysToMilliseconds(30), 0, 'Chapter1Write'],
+      ['Chapter2Write', 'Chapter2: Write','Introduction',
+      null, new Date(2022, 6, 1), daysToMilliseconds(30), 0, 'Chapter1Write'],
+      ['Chapter2Edit', 'Chapter2: Edit','Introduction',
+      new Date(2022, 6, 1), null, daysToMilliseconds(30), 0, 'Chapter2Write'],
+      ['Chapter3Write', 'Chapter3: Write','Introduction',
+      null, new Date(2022, 7, 1), daysToMilliseconds(30), 0, 'Chapter2Write'],
+      ['Chapter3Edit', 'Chapter3: Edit','Introduction',
+      null, new Date(2022, 8, 1), daysToMilliseconds(30), 0, 'Chapter3Write'],
+      ['Chapter4Write', 'Chapter4: Write','Introduction',
+      null, new Date(2022, 8, 1), daysToMilliseconds(30), 0, 'Chapter3Write'],
+      ['Chapter4Edit', 'Chapter4: Edit','Introduction',
+      null, new Date(2022, 9, 1), daysToMilliseconds(30), 0, 'Chapter4Write'],
+      ['Chapter5Write', 'Chapter5: Write','Experiment',
+      null, new Date(2022, 9, 1), daysToMilliseconds(30), 0, 'Chapter4Write,experiment2'],
+      ['Chapter5Edit', 'Chapter5: Edit','Experiment',
+      null, new Date(2022, 10, 1), daysToMilliseconds(30), 0, 'Chapter5Write,experiment2'],
+      ['Chapter6Write', 'Chapter6: Write','Experiment',
+      null, new Date(2022, 10, 1), daysToMilliseconds(30), 0, 'Chapter5Write,experiment3'],
+      ['Chapter6Edit', 'Chapter6: Edit','Experiment',
+      null, new Date(2022, 11, 1), daysToMilliseconds(30), 0, 'Chapter6Write,experiment3'],
+      ['Chapter7Write', 'Chapter7: Write','Experiment',
+      null, new Date(2022, 11, 1), daysToMilliseconds(30), 0, 'Chapter6Write,experiment4'],
+      ['Chapter7Edit', 'Chapter7: Edit','Experiment',
+      null, new Date(2022, 12, 1), daysToMilliseconds(30), 0, 'Chapter7Write,experiment4'],
+      ['Backmatter', 'Backmatter','Thesis',
+      null, new Date(2023, 1, 1), daysToMilliseconds(30), 0, 'Chapter5Edit,Chapter6Edit,Chapter7Edit'],
+      ['Frontmatter', 'Frontmatter','Thesis',
+      null, new Date(2023, 1, 1), daysToMilliseconds(30), 0, 'Chapter1Edit,Chapter2Edit,Chapter3Edit,Chapter4Edit'],
+      ['References', 'References','Thesis',
+      null, new Date(2023, 2, 1), daysToMilliseconds(30), 0, 'Frontmatter,Backmatter'],
+      ['Review', 'Review','Thesis',
+      null, new Date(2023, 2, 1), daysToMilliseconds(10), 0, 'References'],
+      ['Software', 'Package Software & Appendices','Thesis',
+      null, new Date(2023, 2, 1), daysToMilliseconds(20), 0, 'Backmatter'],
+      ['Submission', 'Submission','Thesis',
+      null, new Date(2023, 3, 1), daysToMilliseconds(30), 0, 'Software,Review']
+    ]);
+
+    var options = {
+      height: 1024
+    };
+
+    var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+    chart.draw(data, options);
+  }
+</script>
+
+
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>PhD</title>
+    <title>Research</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -62,28 +143,49 @@
         <p> The long-term goal of this work is to create a small system that can inform users of the quality of their sleep, and can provide non-invasive masking
         noise that will improve the sleep quality of people in a range of environments such as intensive care and urban centers. </p>
       </div> -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg boxy">
-            <p>Publications:</p>
-            <p> <ul>
-              <li> Definition of the desired algorithm </li>
-              <li> Prototype of algorithm in Matlab </li>
-              <li> Benchmarking of algorithm using Matlab in DSP native numerical format (such as Fixed Point for AD Sigma DSPs) </li>
-              <li> Algorithm implementation in native environment </li>
-              <li> Implementation testing against Benchmark </li>
-              <li> Further user interface development (if necesarry) </li>
-              <li> Project conclusion (excluding any support agreement) </li>
-            </ul> </p>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg boxy">
+          <p style="text-align:center">Under Construction <a href="index.html"><img src="assets/favicon_io/favicon.ico" class="img-m" alt="brand"></a></p>
+          <p>Introduction to my research interests...</p>
+          <p> I have some research interests... almost entirely in audio, signal processing and human perception </p>
         </div>
       </div>
-
-
-
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg boxy">
+          <p>Publications:</p>
+          <p> <ul>
+            <li>  <a href="https://www.researchgate.net/publication/323914860_THE_EFFECTS_OF_DISTORTION_ON_THE_PERCEPTION_OF_LOUDNESS_IN_LIVE_SOUND">The Effects of Distortion on the Perception of Loudness in Live Sound</a>  </li>
+            <li>  <a href="https://www.researchgate.net/publication/323914084_EFFICIENT_ACOUSTIC_MODELLING_OF_LARGE_SPACES_USING_FINITE_DIFFERENCE_METHODS">Efficient Acoustic Modelling of Large Spaces Using Finite Difference Methods</a</li>
+            <li>  <a href="https://github.com/sedurCode/SoundscapePhysiologicalAssessment">Soundscape Physiological Assessment</a>  </li>
+          </ul> </p>
+        </div>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg boxy">
+          <p>Datasets:</p>
+          <p> <ul>
+            <li>  <a href="https://github.com/sedurCode/SoundscapePhysiologicalAssessment">Soundscape Physiological Assessment</a>  </li>
+          </ul> </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg boxy">
+          <h1 style="text-align:center">Timeline To Finish PhD </h1>
+          <div id="chart_div"></div>
+        </div>
+      </div>
+    </div>
 
 
   </body>
