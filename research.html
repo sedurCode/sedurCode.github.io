@@ -10,15 +10,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="journeyGraphics.js"></script>
     <link rel="icon" href="assets/favicon.ico">
-      <script> 
-        $(function(){
-          $("#includedNavbar").load("main-navbar.html"); 
-        });
-        </script> 
+    <script> 
+      $(function(){
+        $("#includedNavbar").load("main-navbar.html"); 
+      });
+      $(function(){
+        $("#includedFooter").load("footer.html"); 
+      });
+      </script> 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="phd_timeline.js"></script>
 
-    <title>Research</title>
+    <title>SEDAudio - Research</title>
   </head>
   <body>
     <div id="includedNavbar"></div> 
@@ -80,10 +83,12 @@
         <div class="col-lg boxy">
           <h1 style="text-align:center">Timeline To Finish PhD </h1>
           <!-- <div id="chart_div"></div> -->
-          <iframe src="https://view.monday.com/embed/1166946804-8787fb05245733cf17ae0517e9240f2f?r=euc1" width=1800 height=750 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
+          <iframe src="https://view.monday.com/embed/1166946804-8787fb05245733cf17ae0517e9240f2f?r=euc1" width=1200 height=600 style="border: 0; box-shadow: 5px 5px 56px 0px rgba(0,0,0,0.25);"></iframe>
         </div>
       </div>
     </div>
+
+    <div id="includedFooter"></div> 
 
   </body>
 </html>

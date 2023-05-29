@@ -9,10 +9,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <meta charset="utf-8">
-    <title>sedurCode</title>
+    <title>SEDAudio - Home</title>
     <script> 
       $(function(){
         $("#includedNavbar").load("main-navbar.html"); 
+      });
+      $(function(){
+        $("#includedFooter").load("footer.html"); 
       });
       </script> 
     
@@ -29,30 +32,21 @@
   </head>
   <body>
     <div id="includedNavbar"></div> 
-
+    
     <!-- OTHER STUFF ON THE PAGE -->
     <!-- <div class="row justify-content-center"> -->
       <!-- <div class="col-md boxy">
       </div> -->
       <!-- Image  -->
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
         <div class="col-md boxy">
           <div class="jumbotron">
             <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
             <div id="p5canvas"></div>
             <script src="sketch.js"></script>
-            <!-- <iframe src="fRaCtAlS\index.html" 
-            style="border:0px #000000 none;" 
-            name="fRaCtAlS" 
-            scrolling="no" 
-            frameborder="1" 
-            marginheight="px" 
-            marginwidth="320px" 
-            height="414px" 
-            width="740px"></iframe> -->
          </div>
        </div>
-    </div>
+    </div> -->
     <!-- text intro -->
       <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
         <div class="col-md boxy">
@@ -88,12 +82,35 @@
           <p>...</p>
           <!-- <a href="consultancy.html"><img src="assets/NSynth Chasis1.jpg" class="img-fluid" alt="PhD Image"></a> -->
           <a href="consultancy.html">
-            <img src="assets/Neural-DSP-Quad-Cortex.png" class="img-fluid" alt="Consulting Image">
+            <img src="assets/Neural-DSP-Quad-Cortex.png" class="img-fluid" alt="Consulting Image" width="500" height="600">
           </a>
         </div>
         <!-- <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
       </div>
     </div>
+
+    <!-- <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+      <div class="col-md boxy">
+        <div class="jumbotron">
+          <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+          <div id="p5canvas"></div>
+          <h2 class="display-5">Unity Based Fractal Shader</h2>
+          <p class="display-5">Just for fun</p>
+          <p class="display-5">WASD to translate</p>
+          <p class="display-5">&#8593; &#8595; Arrows to zoom</p>
+          <p class="display-5">&#8592; &#8594; Arrows to rotate</p>
+          <iframe src="fRaCtAlS\index.html" 
+          style="border:0px #000000 none;" 
+          name="fRaCtAlS" 
+          scrolling="no" 
+          frameborder="1" 
+          marginheight="px" 
+          marginwidth="320px" 
+          height="414px" 
+          width="740px"></iframe>
+       </div>
+     </div>
+  </div> -->
 <!-- 
     <div class="row">
       <div class="col-lg boxy">
@@ -125,16 +142,8 @@
         <!-- <div class="bg-light shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"></div> -->
       <!-- </div> -->
     <!-- </div> -->
-<!-- Footer -->
-    <footer class="container py-5">
-      <div class="row">
-        <div class="col-12 col-md">
-          <a href="index.html"><img src="assets/favicon.ico/apple-icon-57x57.png" class="img-m" alt="brand"></a>
-          <small class="d-block mb-3 text-muted">&copy; 2017-2019</small>
-        </div>
-      </div>
-    </footer>
 
+    <div id="includedFooter"></div> 
 
   </body>
 </html>
