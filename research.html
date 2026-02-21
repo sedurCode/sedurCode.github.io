@@ -6,6 +6,31 @@
   <title>SEDAudio – Research</title>
   <meta name="description" content="Simon Durbridge – Research in soundscape evaluation, physiological sensing and binaural audio rendering.">
 
+  <!-- ── Security headers ── -->
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src  'self'
+                https://cdn.jsdelivr.net
+                https://www.googletagmanager.com
+                https://www.google-analytics.com;
+    style-src   'self'
+                https://cdn.jsdelivr.net
+                https://fonts.googleapis.com;
+    font-src    'self'
+                https://fonts.gstatic.com;
+    img-src     'self'
+                data:
+                https://www.google-analytics.com;
+    connect-src 'self'
+                https://www.google-analytics.com;
+    frame-src   'none';
+    object-src  'none';
+    base-uri    'self';
+    form-action 'self';
+  ">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="stylesheet.css">
@@ -60,25 +85,25 @@
       <p class="sed-section-sub">Peer-reviewed journal articles and conference papers</p>
       <ul class="sed-list">
         <li>
-          <a href="https://doi.org/10.1051/aacus/2022059" target="_blank" rel="noopener">
+          <a href="https://doi.org/10.1051/aacus/2022059" target="_blank" rel="noopener noreferrer">
             Assessment of soundscapes using self-report and physiological measures
           </a>
           <br><span class="text-muted-sed" style="font-size:.85rem;">Acta Acustica, 2022</span>
         </li>
         <li>
-          <a href="http://www.aes.org/e-lib/browse.cfm?elib=21843" target="_blank" rel="noopener">
+          <a href="http://www.aes.org/e-lib/browse.cfm?elib=21843" target="_blank" rel="noopener noreferrer">
             Soundscape Evaluation In The Virtual Reality: Tools for the creation of soundscape studies
           </a>
           <br><span class="text-muted-sed" style="font-size:.85rem;">AES, 2022</span>
         </li>
         <li>
-          <a href="https://www.researchgate.net/publication/323914860_THE_EFFECTS_OF_DISTORTION_ON_THE_PERCEPTION_OF_LOUDNESS_IN_LIVE_SOUND" target="_blank" rel="noopener">
+          <a href="https://www.researchgate.net/publication/323914860_THE_EFFECTS_OF_DISTORTION_ON_THE_PERCEPTION_OF_LOUDNESS_IN_LIVE_SOUND" target="_blank" rel="noopener noreferrer">
             The Effects of Distortion on the Perception of Loudness in Live Sound
           </a>
           <br><span class="text-muted-sed" style="font-size:.85rem;">ResearchGate</span>
         </li>
         <li>
-          <a href="https://www.researchgate.net/publication/323914084_EFFICIENT_ACOUSTIC_MODELLING_OF_LARGE_SPACES_USING_FINITE_DIFFERENCE_METHODS" target="_blank" rel="noopener">
+          <a href="https://www.researchgate.net/publication/323914084_EFFICIENT_ACOUSTIC_MODELLING_OF_LARGE_SPACES_USING_FINITE_DIFFERENCE_METHODS" target="_blank" rel="noopener noreferrer">
             Efficient Acoustic Modelling of Large Spaces Using Finite Difference Methods
           </a>
           <br><span class="text-muted-sed" style="font-size:.85rem;">ResearchGate</span>
@@ -96,22 +121,22 @@
       <p class="sed-section-sub">Code and resources released alongside research</p>
       <ul class="sed-list">
         <li>
-          <a href="https://github.com/sedurCode/ActaAcustica22Resources" target="_blank" rel="noopener">
+          <a href="https://github.com/sedurCode/ActaAcustica22Resources" target="_blank" rel="noopener noreferrer">
             Acta Acustica 2022 – Journal Article Resources
           </a>
         </li>
         <li>
-          <a href="https://github.com/sedurCode/SoundscapePhysiologicalAssessment" target="_blank" rel="noopener">
+          <a href="https://github.com/sedurCode/SoundscapePhysiologicalAssessment" target="_blank" rel="noopener noreferrer">
             Soundscape Physiological Assessment Pilot
           </a>
         </li>
         <li>
-          <a href="https://github.com/sedurCode/SoundscapePhysiologicalAssessment" target="_blank" rel="noopener">
+          <a href="https://github.com/sedurCode/SoundscapePhysiologicalAssessment" target="_blank" rel="noopener noreferrer">
             Soundscape Evaluation Framework for Unity
           </a>
         </li>
         <li>
-          <a href="https://github.com/sedurCode/Acoustic_Indices" target="_blank" rel="noopener">
+          <a href="https://github.com/sedurCode/Acoustic_Indices" target="_blank" rel="noopener noreferrer">
             Acoustic Indices (fork updated for Python 3)
           </a>
         </li>
@@ -121,7 +146,7 @@
 
   <!-- Cookie banner -->
   <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
-    <p>We use cookies to analyse site traffic. <a href="https://www.cookiesandyou.com/" target="_blank" rel="noopener">Learn more</a>.</p>
+    <p>We use cookies to analyse site traffic. <a href="https://www.cookiesandyou.com/" target="_blank" rel="noopener noreferrer">Learn more</a>.</p>
     <button class="cookie-btn-accept" id="cookie-accept">Accept</button>
     <button class="cookie-btn-decline" id="cookie-decline">Decline</button>
   </div>
