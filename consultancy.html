@@ -1,129 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128165354-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-128165354-1');
-    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <title>Consultancy</title>
+    <title>SEDAudio - Consultancy</title>
     <!-- Latest compiled and minified CSS -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="journeyGraphics.js"></script>
     <link rel="icon" href="assets/favicon.ico">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawSeriesChart);
-
-      function drawSeriesChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['ID',        'Complexity', 'Confidence', 'LanguageType', 'Experience'],
-          ['Python',    0.6,          0.75,          'Scripted',      0.6],
-          ['C++',       0.8,          0.5,           'Compiled',      0.3],
-          ['Matlab',    0.5,          1.0,           'Scripted',      1.0],
-          ['Java',      0.4,          0.4,           'Scripted',      0.2],
-          ['Web',       0.2,          0.4,           'Scripted',      0.2],
-          ['Assembler', 0.8,          0.8,           'Compiled',      0.6],
-          ['Google Charts inflexibility to define axis limits.', 1.1, 1.1, 'Scripted', 0.1]]);
-
-        var options = {
-          title: 'The Relationship Between the Languages I Have Programmed in, ' +
-                 'the languanges Complexity and How Confident I Feel About Programming in That Language.',
-          hAxis: {title: 'Complexity'},
-          vAxis: {title: 'Confidence'},
-          bubble: {textStyle: {fontSize: 11},
-          hAxis: {}}
-        };
-
-        var chart = new google.visualization.BubbleChart(document.getElementById('series_chart_div'));
-        chart.draw(data, options);
-      }
-      </script>
+    <script src="code_competency.js"></script>
+    <script> 
+      $(function(){
+        $("#includedNavbar").load("main-navbar.html"); 
+      });
+      $(function(){
+        $("#includedFooter").load("footer.html"); 
+      });
+      </script> 
     <!-- Much of the style of this page was gleefully adapted from https://getbootstrap.com/docs/4.1/examples/product/# -->
   </head>
   <body>
     <!-- NAVBAR -->
-  	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-
-      <a class="navbar-brand" href="index.html">sedurCode</a>
-
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <!-- This is the actual code that creates the "hamburger icon" -->
-      <!-- The data-target grabs ids to put into the icon -->
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-
-      <!-- Anything inside of collapse navbar-collapse goes into the "hamburger" -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <div class="navbar-nav">
-
-          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
-          <a class="nav-item nav-link" href="https://ditheringstudio.wordpress.com/">Blog</a>
-
-          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
-          <a class="nav-item nav-link" href="https://www.linkedin.com/in/sedelectroacoustics/">Linkedin</a>
-
-          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
-          <a class="nav-item nav-link" href="consultancy.html">Consultancy</a>
-
-          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
-          <a class="nav-item nav-link" href="tutoring.html">Tutoring</a>
-
-          <!-- DROPDOWN MENU -->
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Projects
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
-              <a class="dropdown-item" href="hardware.html">Hardware</a>
-              <a class="dropdown-item" href="apps.html">Apps</a>
-              <a class="dropdown-item" href="plugins.html">Plugins</a>
-
-              <!-- Use this to separate a new link: -->
-              <!-- <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Separated link</a> -->
-            </div>
-          </div>
-          <!-- DROPDOWN MENU -->
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Modular
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
-              <a class="dropdown-item" href="clouds.html">Custom Clouds Firmware</a>
-              <a class="dropdown-item" href="Rack.html">VCV Rack</a>
-              <a class="dropdown-item" href="#">Music</a>
-              <a class="dropdown-item" href="mysetup.html">My Setup</a>
-              <a class="dropdown-item" href="modulesforsale.html">Modules For Sale</a>
-            </div>
-          </div>
-          <!-- DROPDOWN MENU -->
-          <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown-menu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Research
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbar-dropdown-menu">
-              <a class="dropdown-item" href="phd.html">PhD</a>
-              <a class="dropdown-item" href="ai.html">AI</a>
-              <a class="dropdown-item" href="dsp.html">DSP</a>
-              <a class="dropdown-item" href="acoustics.html">Acoustics</a>
-            </div>
-          </div>
-          <!-- the span class "sr-only" tells screen readers that Home is the active link, for accessibility -->
-          <a class="nav-item nav-link" href="https://www.linkedin.com/in/sedelectroacoustics/">Contact</a>
-        </div> <!-- /.navbar-nav, left-hand content -->
-    </nav>
+    <div id="includedNavbar"></div> 
     <!-- OTHER STUFF ON THE PAGE -->
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-light">
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-left bg-light">
       <div class="col-md boxy">
         <div class="jumbotron">
           <div class="text-center">
@@ -132,33 +36,37 @@
           </div>
           <p>I provide a range of consultancy services including:</p>
           <ul>
-            <li>Audio algorithm development and implementation</li>
+            <li>Embedded algorithm development and implementation</li>
+            <li>Systems Architecture Design</li>
+            <li>SHARC+ programming</li>
+            <li>Audio plugin development <a href="https://juce.com">
+            <img alt="JUCE" src="https://assets.juce.com/juce-com/318210797015e6e7d4f485247fd97d5631a4600f/favicons/juce-monogram-64.png" width=20" height="20"> </a> </li>
+            <li> MacOS, iOS & Android audio application development</li>
             <li>Analog Devices Sigma DSP Custom Processing Block Development</li>
             <li>Audio app development</li>
             <li>Matlab toolbox development</li>
             <li>Matlab app development</li>
             <li>Python module development</li>
           </ul>
-       </div>
-     </div>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col-lg boxy">
         <div class="container">
-      <p> The programming languages I have programmed in (order of proficiency) are: </p>
-      <ul>
-        <li>Matlab</li>
-        <li>Python</li>
-        <li>Analog Devices Sigma DSP Assembler</li>
-        <li>C++</li>
-        <li>Java / Javascript</li>
-        <li>html</li>
-      </ul>
-      <p></p>
+        <p> The programming languages I have programmed in (order of proficiency) are: </p>
+        <ul>
+          <li>C++</li>
+          <li>Matlab</li>
+          <li>Python</li>
+          <li>Analog Devices Sigma DSP Assembler</li>
+          <li>Java / Javascript</li>
+        </ul>
+        <p></p>
         <div id="series_chart_div" style="width: 600px; height: 500px;"></div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
     <div class="row">
       <div class="col-lg boxy">
         <div class="container">
@@ -184,14 +92,6 @@
       </div>
     </div>
 
-    <footer class="container py-5">
-      <div class="row">
-        <div class="col-12 col-md">
-          <a href="index.html"><img src="assets/favicon.ico/apple-icon-57x57.png" class="img-m" alt="brand"></a>
-          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
-        </div>
-      </div>
-    </footer>
 
     <div class="row">
       <div class="col-lg boxy">
@@ -200,10 +100,7 @@
         </div>
       </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <div id="includedFooter"></div> 
   </body>
 </html>
